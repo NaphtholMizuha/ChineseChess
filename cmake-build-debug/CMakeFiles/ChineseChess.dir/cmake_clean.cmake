@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/ChineseChess.dir/Chessman.cpp.o"
-  "CMakeFiles/ChineseChess.dir/graphic.cpp.o"
+  "CMakeFiles/ChineseChess.dir/Game.cpp.o"
+  "CMakeFiles/ChineseChess.dir/Process.cpp.o"
   "CMakeFiles/ChineseChess.dir/main.cpp.o"
-  "CMakeFiles/ChineseChess.dir/mainPage.cpp.o"
   "ChineseChess"
   "ChineseChess.pdb"
 )

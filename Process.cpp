@@ -2,7 +2,8 @@
 // Created by NaphtholMizuha on 2021/5/12.
 //
 
-#include "mainPage.h"
+#include "Process.h"
+#include "graphic.h"
 void showTitle(std::string info) {
     cout << SEPERATOR << endl<< CHINESS_CHESS << endl << SEPERATOR << endl;
     cout << space(16) << "1.开始游戏" << space(16) << endl;
@@ -16,7 +17,20 @@ void clearScreen() {
     cout << "\033[2J" << endl;
 }
 
+string space(int num) {
+    string result;
+    for (int i = 0; i < num; ++i) {
+        result += " ";
+    }
+    return result;
+}
 
+void playGame (bool shouldLoad) {
+    Game game;
+    game.rounds();
+    cout << endl << SEPERATOR << game.getEndingInfo() << SEPERATOR;
+
+}
 
 
 

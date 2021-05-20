@@ -4,15 +4,21 @@
 CMakeFiles/ChineseChess.dir/Chessman.cpp.o
  /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.cpp
  /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
-CMakeFiles/ChineseChess.dir/gamePage.cpp.o
+ /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
+CMakeFiles/ChineseChess.dir/Game.cpp.o
  /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
- /Users/naphtholmizuha/Program/C++/ChineseChess/gamePage.cpp
- /Users/naphtholmizuha/Program/C++/ChineseChess/gamePage.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Game.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
+CMakeFiles/ChineseChess.dir/Process.cpp.o
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Game.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Process.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
 CMakeFiles/ChineseChess.dir/main.cpp.o
- /Users/naphtholmizuha/Program/C++/ChineseChess/font.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Game.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/Process.h
+ /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
  /Users/naphtholmizuha/Program/C++/ChineseChess/main.cpp
- /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.h
-CMakeFiles/ChineseChess.dir/mainPage.cpp.o
- /Users/naphtholmizuha/Program/C++/ChineseChess/font.h
- /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.cpp
- /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.h

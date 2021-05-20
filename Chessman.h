@@ -2,7 +2,7 @@
 #define CHINESECHESS_CHESSMAN_H
 #include <iostream>
 #include <string>
-#include "font.h"
+#include "graphic.h"
 using namespace std;
 
 const int AMOUNT_OF_WHOLE_CHESSMEN = 32;
@@ -110,6 +110,8 @@ public:
     void swap(int x1 , int y1 , int x2 , int y2);
     string shape(int x , int y) const;//spawn the appearance of a chessman
     void print();//print all the chessboard
+    bool isFinished() const;
+    Chessboard& operator=(const Chessboard& src);
 };
 
 #endif //CHINESECHESS_CHESSMAN_H

@@ -76,14 +76,14 @@ bool Soldier::canMove(int destX, int destY , const Chessboard& chessboard, Error
             if (camp_ == RED) {
                 if (destX == x_ && destY - y_ == 1) return true;
                 else {
-                    errorInfo = "兵过河前只能前进一格！";
+                    errorInfo = "兵过河前只能前进一格";
                     return false;
                 }
             }
             else {
                 if (destX == x_ && destY - y_ == -1) return true;
                 else {
-                    errorInfo = "卒过河前只能前进一格！";
+                    errorInfo = "卒过河前只能前进一格";
                     return false;
                 }
             }
@@ -92,14 +92,14 @@ bool Soldier::canMove(int destX, int destY , const Chessboard& chessboard, Error
             if (camp_ == RED) {
                 if ((abs(destX - x_) == 1  && destY == y_) || (destX == x_ && destY - y_ == 1)) return true;
                 else {
-                    errorInfo = "兵过河后只能想前、中、左走一格！";
+                    errorInfo = "兵过河后只能想前、中、左走一格";
                     return false;
                 }
             }
             else {
                 if ((abs(destX - x_) == 1  && destY == y_) || (destX == x_ && destY - y_ == -1)) return true;
                 else {
-                    errorInfo = "兵过河后只能想前、中、左走一格！";
+                    errorInfo = "兵过河后只能想前、中、左走一格";
                     return false;
                 }
             }
@@ -127,14 +127,14 @@ bool Vehicle::canMove(int destX, int destY, const Chessboard &chessboard , Error
 
     // to check if the vehicle would move in vertical of horizontal line
     if (destX != x_ && destY != y_) {
-        errorInfo = "车只能走直线，请再确认一下！";
+        errorInfo = "车只能走直线";
         return false;
     }
 
 
     // to check if the vehicle is blocked by some enemy
     if (chessmanAmountBetween(destX , destY , chessboard) != 0) {
-        errorInfo = "此车被其他棋子阻挡，请再次确认！";
+        errorInfo = "此车被其他棋子阻挡";
         return false;
     }
 
@@ -159,7 +159,7 @@ bool Horse::canMove(int destX, int destY, const Chessboard &chessboard , ErrorIn
         (destY - y_ == 2 && chessboard(x_ , y_ + 1)->getType() != VACCUM) ||
         (x_ - destX == 2 && chessboard(x_ - 1 , y_)->getType() != VACCUM) ||
         (y_ - destY == 2 && chessboard(x_ , y_ - 1)->getType() != VACCUM)) {
-        errorInfo = "此马被\"拐马脚\"，请再次确认！";
+        errorInfo = "此马被\"拐马脚\"";
         return false;
     }
     return true;
@@ -173,12 +173,12 @@ bool Elephant::canMove(int destX, int destY, const Chessboard &chessboard, Error
     }
 
     if ((camp_ == RED && destY > 5) || (camp_ == BLUE && destY <= 5)) {
-        errorInfo = "相/象不能过河，请再次确认！";
+        errorInfo = "相/象不能过河";
         return false;
     }
 
     if (!(abs(destX - x_) == 2 && abs(destY - y_) == 2)) {
-        errorInfo = "象只能走田字，请再次确认！";
+        errorInfo = "象只能走田字";
         return false;
     }
 
@@ -186,7 +186,7 @@ bool Elephant::canMove(int destX, int destY, const Chessboard &chessboard, Error
         (destX - x_ == 2 && y_ - destY == 2 && chessboard(x_ + 1 , y_ - 1)->getType() != VACCUM) ||
         (x_ - destX == 2 && destY - y_ == 2 && chessboard(x_ - 1 , y_ + 1)->getType() != VACCUM) ||
         (x_ - destX == 2 && y_ - destY == 2 && chessboard(x_ - 1 , y_ - 1)->getType() != VACCUM)){
-        errorInfo = "此象被\"憋象脚\"，请再次确认！";
+        errorInfo = "此象被\"憋象脚\"";
         return false;
     }
 
@@ -201,14 +201,14 @@ bool Guarder::canMove(int destX, int destY, const Chessboard &chessboard, ErrorI
     }
 
     if (destX < NINE_PALACE_LEFT || destX > NINE_PALACE_RIGHT ||
-        (camp_ == BLUE && destY > BLUE_NINE_PALACE_BOTTOM && destY < BLUE_NINE_PALACE_TOP) ||
-        (camp_ == RED && destY > RED_NINE_PALACE_BOTTOM && destY < RED_NINE_PALACE_TOP)){
-        errorInfo = "士/仕不能离开九宫，请再次确认！";
+        (camp_ == BLUE && (destY > BLUE_NINE_PALACE_BOTTOM || destY < BLUE_NINE_PALACE_TOP)) ||
+        (camp_ == RED && (destY > RED_NINE_PALACE_BOTTOM || destY < RED_NINE_PALACE_TOP))){
+        errorInfo = "士/仕不能离开九宫";
         return false;
     }
 
     if (!(abs(destX - x_) == 1 && abs(destY - y_) == 1)) {
-        errorInfo = "士/仕只能在斜线走一步，请再次确认！";
+        errorInfo = "士/仕只能在斜线走一步";
         return false;
     }
 
@@ -229,14 +229,14 @@ bool General::canMove(int destX, int destY, const Chessboard &chessboard, ErrorI
     }
 
     if (destX < NINE_PALACE_LEFT || destX > NINE_PALACE_RIGHT ||
-        (camp_ == BLUE && destY < BLUE_NINE_PALACE_BOTTOM && destY > BLUE_NINE_PALACE_TOP) ||
-        (camp_ == RED && destY < RED_NINE_PALACE_BOTTOM && destY > RED_NINE_PALACE_TOP)){
-        errorInfo = "除\"飞将\"外，将/相不能离开九宫，请再次确认！";
+        (camp_ == BLUE && (destY > BLUE_NINE_PALACE_BOTTOM || destY < BLUE_NINE_PALACE_TOP)) ||
+        (camp_ == RED && (destY > RED_NINE_PALACE_BOTTOM || destY < RED_NINE_PALACE_TOP))){
+        errorInfo = "除\"飞将\"外，将/帅不能离开九宫";
         return false;
     }
 
-    if (!((x_ == destX && abs(y_ - destY) == 1) && (y_ == destY && abs(x_ - destX) == 1))) {
-        errorInfo = "除\"飞将\"外，将/帅只能在横竖方向走一格，请再次确认！";
+    if (!((x_ == destX && abs(y_ - destY) == 1) || (y_ == destY && abs(x_ - destX) == 1))) {
+        errorInfo = "除\"飞将\"外，将/帅只能在横竖方向走一格";
         return false;
     }
 
@@ -251,22 +251,22 @@ bool Bombard::canMove(int destX, int destY, const Chessboard &chessboard, ErrorI
     }
 
     if (destX != x_ && destY != y_) {
-        errorInfo = "炮/砲只能走直线，请再确认一下！";
+        errorInfo = "炮/砲只能走直线";
         return false;
     }
 
     if (chessmanAmountBetween(destX , destY , chessboard) == 0 && chessboard(destX , destY)->getType() != VACCUM) {
-        errorInfo = "炮/砲不能直接吃子，请再确认一下！";
+        errorInfo = "炮/砲不能直接吃子";
         return false;
     }
 
     if (chessmanAmountBetween(destX , destY , chessboard) == 1 && chessboard(destX , destY)->getType() == VACCUM) {
-        errorInfo = "炮/砲只有在吃子的时候才能越过棋子，请再确认一下！";
+        errorInfo = "炮/砲只有在吃子的时候才能越过棋子";
         return false;
     }
 
     if (chessmanAmountBetween(destX , destY , chessboard) > 1) {
-        errorInfo = "炮/砲不能越过这么多棋子，请再确认一下！";
+        errorInfo = "炮/砲不能越过这么多棋子";
         return false;
     }
 
@@ -430,3 +430,12 @@ string Chessboard::shape(int x, int y) const {
         if (target->getType() == SOLDIER) return SHAPE_OF_SOLDIER_BLUE;
     }
 }
+
+bool Chessboard::isFinished() const {
+    for (int i = 1; i < AMOUNT_OF_WHOLE_CHESSMEN; i++) {
+        if (at(DEAD , i)->getType() == GENERAL) return true;
+    }
+
+    return false;
+}
+

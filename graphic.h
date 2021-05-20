@@ -2,8 +2,8 @@
 // Created by NaphtholMizuha on 2021/5/12.
 //
 
-#ifndef CHINESECHESS_FONT_H
-#define CHINESECHESS_FONT_H
+#ifndef CHINESECHESS_GRAPHIC_H
+#define CHINESECHESS_GRAPHIC_H
 #include <string>
 using std::string;
 
@@ -11,6 +11,7 @@ const string RED_WORD = "\033[1;31m";
 const string BLUE_WORD = "\033[1;34m";
 const string TWINKLE_WORD = "\033[5m";
 const string DEFAULT_WORD = "\033[0m";
+const string CLEAR_SCREEN = "\033[2J";
 
 const string TEN_SPACES = "          ";
 const string ELEVEN_SPACES = "           ";
@@ -39,5 +40,11 @@ const string SHAPE_OF_HORSE_BLUE = BLUE_WORD + "(馬)" + DEFAULT_WORD;
 const string SHAPE_OF_VEHICLE_RED = RED_WORD + "(車)" + DEFAULT_WORD;
 const string SHAPE_OF_VEHICLE_BLUE = BLUE_WORD + "(車)" + DEFAULT_WORD;
 
-
-#endif //CHINESECHESS_FONT_H
+const string WELCOME_RED = "现在是" + RED_WORD + "红方" + DEFAULT_WORD + "的回合，请" + RED_WORD + "红方" + DEFAULT_WORD + "选中需要下的棋子";
+const string WELCOME_BLUE = "现在是" + BLUE_WORD + "蓝方" + DEFAULT_WORD + "的回合，请" + BLUE_WORD + "蓝方" + DEFAULT_WORD + "选中需要下的棋子";
+const string HAVE_CHOSEN = "已选择：";
+const string CHOOSE_DEST = "，请选择需要将该棋子移动到的地方，如果取消选中，请输入Q:";
+const string FORM_WRONG = "格式错误，请输入诸如A1的坐标：";
+const string ASK_FOR_COORDINATE = "请输入坐标：";
+const string CAMP_WRONG = "无法操作别人的棋子或者空气，请再次输入：";
+#endif //CHINESECHESS_GRAPHIC_H

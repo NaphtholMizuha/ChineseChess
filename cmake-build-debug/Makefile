@@ -169,32 +169,59 @@ Chessman.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Chessman.cpp.s
 .PHONY : Chessman.cpp.s
 
-graphic.o: graphic.cpp.o
+Game.o: Game.cpp.o
 
-.PHONY : graphic.o
+.PHONY : Game.o
 
 # target to build an object file
-graphic.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/graphic.cpp.o
-.PHONY : graphic.cpp.o
+Game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Game.cpp.o
+.PHONY : Game.cpp.o
 
-graphic.i: graphic.cpp.i
+Game.i: Game.cpp.i
 
-.PHONY : graphic.i
+.PHONY : Game.i
 
 # target to preprocess a source file
-graphic.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/graphic.cpp.i
-.PHONY : graphic.cpp.i
+Game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Game.cpp.i
+.PHONY : Game.cpp.i
 
-graphic.s: graphic.cpp.s
+Game.s: Game.cpp.s
 
-.PHONY : graphic.s
+.PHONY : Game.s
 
 # target to generate assembly for a file
-graphic.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/graphic.cpp.s
-.PHONY : graphic.cpp.s
+Game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Game.cpp.s
+.PHONY : Game.cpp.s
+
+Process.o: Process.cpp.o
+
+.PHONY : Process.o
+
+# target to build an object file
+Process.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Process.cpp.o
+.PHONY : Process.cpp.o
+
+Process.i: Process.cpp.i
+
+.PHONY : Process.i
+
+# target to preprocess a source file
+Process.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Process.cpp.i
+.PHONY : Process.cpp.i
+
+Process.s: Process.cpp.s
+
+.PHONY : Process.s
+
+# target to generate assembly for a file
+Process.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/Process.cpp.s
+.PHONY : Process.cpp.s
 
 main.o: main.cpp.o
 
@@ -223,33 +250,6 @@ main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-mainPage.o: mainPage.cpp.o
-
-.PHONY : mainPage.o
-
-# target to build an object file
-mainPage.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/mainPage.cpp.o
-.PHONY : mainPage.cpp.o
-
-mainPage.i: mainPage.cpp.i
-
-.PHONY : mainPage.i
-
-# target to preprocess a source file
-mainPage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/mainPage.cpp.i
-.PHONY : mainPage.cpp.i
-
-mainPage.s: mainPage.cpp.s
-
-.PHONY : mainPage.s
-
-# target to generate assembly for a file
-mainPage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/ChineseChess.dir/build.make CMakeFiles/ChineseChess.dir/mainPage.cpp.s
-.PHONY : mainPage.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -262,15 +262,15 @@ help:
 	@echo "... Chessman.o"
 	@echo "... Chessman.i"
 	@echo "... Chessman.s"
-	@echo "... graphic.o"
-	@echo "... graphic.i"
-	@echo "... graphic.s"
+	@echo "... Game.o"
+	@echo "... Game.i"
+	@echo "... Game.s"
+	@echo "... Process.o"
+	@echo "... Process.i"
+	@echo "... Process.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... mainPage.o"
-	@echo "... mainPage.i"
-	@echo "... mainPage.s"
 .PHONY : help
 
 

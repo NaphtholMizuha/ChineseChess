@@ -89,22 +89,9 @@ CMakeFiles/ChineseChess.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/main.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/main.cpp -o CMakeFiles/ChineseChess.dir/main.cpp.s
 
-CMakeFiles/ChineseChess.dir/mainPage.cpp.o: CMakeFiles/ChineseChess.dir/flags.make
-CMakeFiles/ChineseChess.dir/mainPage.cpp.o: ../mainPage.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChineseChess.dir/mainPage.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ChineseChess.dir/mainPage.cpp.o -c /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.cpp
-
-CMakeFiles/ChineseChess.dir/mainPage.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChineseChess.dir/mainPage.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.cpp > CMakeFiles/ChineseChess.dir/mainPage.cpp.i
-
-CMakeFiles/ChineseChess.dir/mainPage.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/mainPage.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.cpp -o CMakeFiles/ChineseChess.dir/mainPage.cpp.s
-
 CMakeFiles/ChineseChess.dir/Chessman.cpp.o: CMakeFiles/ChineseChess.dir/flags.make
 CMakeFiles/ChineseChess.dir/Chessman.cpp.o: ../Chessman.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChineseChess.dir/Chessman.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/ChineseChess.dir/Chessman.cpp.o"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ChineseChess.dir/Chessman.cpp.o -c /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.cpp
 
 CMakeFiles/ChineseChess.dir/Chessman.cpp.i: cmake_force
@@ -115,33 +102,46 @@ CMakeFiles/ChineseChess.dir/Chessman.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/Chessman.cpp.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.cpp -o CMakeFiles/ChineseChess.dir/Chessman.cpp.s
 
-CMakeFiles/ChineseChess.dir/graphic.cpp.o: CMakeFiles/ChineseChess.dir/flags.make
-CMakeFiles/ChineseChess.dir/graphic.cpp.o: ../graphic.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChineseChess.dir/graphic.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ChineseChess.dir/graphic.cpp.o -c /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.cpp
+CMakeFiles/ChineseChess.dir/Process.cpp.o: CMakeFiles/ChineseChess.dir/flags.make
+CMakeFiles/ChineseChess.dir/Process.cpp.o: ../Process.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/ChineseChess.dir/Process.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ChineseChess.dir/Process.cpp.o -c /Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp
 
-CMakeFiles/ChineseChess.dir/graphic.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChineseChess.dir/graphic.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.cpp > CMakeFiles/ChineseChess.dir/graphic.cpp.i
+CMakeFiles/ChineseChess.dir/Process.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChineseChess.dir/Process.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp > CMakeFiles/ChineseChess.dir/Process.cpp.i
 
-CMakeFiles/ChineseChess.dir/graphic.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/graphic.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.cpp -o CMakeFiles/ChineseChess.dir/graphic.cpp.s
+CMakeFiles/ChineseChess.dir/Process.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/Process.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp -o CMakeFiles/ChineseChess.dir/Process.cpp.s
+
+CMakeFiles/ChineseChess.dir/Game.cpp.o: CMakeFiles/ChineseChess.dir/flags.make
+CMakeFiles/ChineseChess.dir/Game.cpp.o: ../Game.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/ChineseChess.dir/Game.cpp.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/ChineseChess.dir/Game.cpp.o -c /Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp
+
+CMakeFiles/ChineseChess.dir/Game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/ChineseChess.dir/Game.cpp.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp > CMakeFiles/ChineseChess.dir/Game.cpp.i
+
+CMakeFiles/ChineseChess.dir/Game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/ChineseChess.dir/Game.cpp.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp -o CMakeFiles/ChineseChess.dir/Game.cpp.s
 
 # Object files for target ChineseChess
 ChineseChess_OBJECTS = \
 "CMakeFiles/ChineseChess.dir/main.cpp.o" \
-"CMakeFiles/ChineseChess.dir/mainPage.cpp.o" \
 "CMakeFiles/ChineseChess.dir/Chessman.cpp.o" \
-"CMakeFiles/ChineseChess.dir/graphic.cpp.o"
+"CMakeFiles/ChineseChess.dir/Process.cpp.o" \
+"CMakeFiles/ChineseChess.dir/Game.cpp.o"
 
 # External object files for target ChineseChess
 ChineseChess_EXTERNAL_OBJECTS =
 
 ChineseChess: CMakeFiles/ChineseChess.dir/main.cpp.o
-ChineseChess: CMakeFiles/ChineseChess.dir/mainPage.cpp.o
 ChineseChess: CMakeFiles/ChineseChess.dir/Chessman.cpp.o
-ChineseChess: CMakeFiles/ChineseChess.dir/graphic.cpp.o
+ChineseChess: CMakeFiles/ChineseChess.dir/Process.cpp.o
+ChineseChess: CMakeFiles/ChineseChess.dir/Game.cpp.o
 ChineseChess: CMakeFiles/ChineseChess.dir/build.make
 ChineseChess: CMakeFiles/ChineseChess.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/naphtholmizuha/Program/C++/ChineseChess/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ChineseChess"

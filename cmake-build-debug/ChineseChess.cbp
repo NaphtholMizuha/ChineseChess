@@ -86,22 +86,22 @@
 		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h">
 			<Option target="ChineseChess"/>
 		</Unit>
-		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/font.h">
+		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp">
 			<Option target="ChineseChess"/>
 		</Unit>
-		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/graphic.cpp">
+		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/Game.h">
+			<Option target="ChineseChess"/>
+		</Unit>
+		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp">
+			<Option target="ChineseChess"/>
+		</Unit>
+		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/Process.h">
 			<Option target="ChineseChess"/>
 		</Unit>
 		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h">
 			<Option target="ChineseChess"/>
 		</Unit>
 		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/main.cpp">
-			<Option target="ChineseChess"/>
-		</Unit>
-		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.cpp">
-			<Option target="ChineseChess"/>
-		</Unit>
-		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/mainPage.h">
 			<Option target="ChineseChess"/>
 		</Unit>
 		<Unit filename="/Users/naphtholmizuha/Program/C++/ChineseChess/CMakeLists.txt">

@@ -45,6 +45,6 @@ const string WELCOME_BLUE = "现在是" + BLUE_WORD + "蓝方" + DEFAULT_WORD + 
 const string HAVE_CHOSEN = "已选择：";
 const string CHOOSE_DEST = "，请选择需要将该棋子移动到的地方，如果取消选中，请输入Q:";
 const string FORM_WRONG = "格式错误，请输入诸如A1的坐标：";
-const string ASK_FOR_COORDINATE = "请输入坐标：";
+const string ASK_FOR_COORDINATE = "请输入坐标，如果需要悔棋、请输入W，如果需要保存、请输入S：";
 const string CAMP_WRONG = "无法操作别人的棋子或者空气，请再次输入：";
 #endif //CHINESECHESS_GRAPHIC_H

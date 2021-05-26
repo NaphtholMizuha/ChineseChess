@@ -2,6 +2,7 @@
 // Created by NaphtholMizuha on 2021/5/12.
 //
 
+#include <fstream>
 #include "Chessman.h"
 
 Chessman::Chessman(int x, int y, Camp camp , Type type):x_(x) , y_(y) , camp_(camp) , type_(type){}
@@ -281,7 +282,7 @@ Chessboard::Chessboard() {
     }
 
     for (int i = 0; i < AMOUNT_OF_WHOLE_CHESSMEN; ++i) {
-        tomb[i] = new Chessman(DEAD , i , NEUTRAL , VACCUM);
+        tomb[i] = new Chessman(DEAD , i + 1 , NEUTRAL , VACCUM);
     }
 
     for (int i = 0; i < 5; i++) {//Create Soldiers
@@ -368,7 +369,7 @@ Chessboard::~Chessboard() {
     }
 }
 
-void Chessboard::print() {
+void Chessboard::print() const {
     cout << X_AXIOM << endl << endl;
     for (int i = 1; i <= CHESSBOARD_WIDTH; i++) {
         if (i != 10) cout << i << "  ";
@@ -431,11 +432,167 @@ string Chessboard::shape(int x, int y) const {
     }
 }
 
-bool Chessboard::isFinished() const {
-    for (int i = 1; i < AMOUNT_OF_WHOLE_CHESSMEN; i++) {
-        if (at(DEAD , i)->getType() == GENERAL) return true;
+void Chessboard::loadSave(ifstream& src) {
+    for (auto & i : battleField) {
+        for (auto & j : i) {
+            delete j;
+        }
     }
 
-    return false;
+    for (auto & i : tomb) {
+        delete i;
+    }
+
+    for (int i = 0; i < CHESSBOARD_LENGTH; ++i) {
+        for (int j = 0; j < CHESSBOARD_WIDTH; ++j) {
+            string input;
+            Camp inCamp;
+            src >> input;
+            if (input[0] == 'R') inCamp = RED;
+            else if (input[0] == 'B') inCamp = BLUE;
+            else inCamp = NEUTRAL;
+
+            switch (input[1]) {
+                case 'S':
+                    battleField[i][j] = new Soldier(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'B':
+                    battleField[i][j] = new Bombard(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'H':
+                    battleField[i][j] = new Horse(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'V':
+                    battleField[i][j] = new Vehicle(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'E':
+                    battleField[i][j] = new Elephant(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'U':
+                    battleField[i][j] = new Guarder(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'G':
+                    battleField[i][j] = new General(i + 1 , j + 1 , inCamp);
+                    break;
+                case 'N':
+                    battleField[i][j] = new Chessman(i + 1 , j + 1 , inCamp , VACCUM);
+                    break;
+            }
+
+        }
+    }
+
+    for (int i = 0; i < AMOUNT_OF_WHOLE_CHESSMEN; i++) {
+        string input;
+        Camp inCamp;
+        src >> input;
+        if (input[0] == 'R') inCamp = RED;
+        else if (input[0] == 'B') inCamp = BLUE;
+        else inCamp = NEUTRAL;
+
+        switch (input[1]) {
+            case 'S':
+                tomb[i] = new Soldier(DEAD, i + 1 , inCamp);
+                break;
+            case 'B':
+                tomb[i] = new Bombard(DEAD, i + 1 , inCamp);
+                break;
+            case 'H':
+                tomb[i] = new Horse(DEAD, i + 1 , inCamp);
+                break;
+            case 'V':
+                tomb[i] = new Vehicle(DEAD, i + 1 , inCamp);
+                break;
+            case 'E':
+                tomb[i] = new Elephant(DEAD, i + 1 , inCamp);
+                break;
+            case 'U':
+                tomb[i] = new Guarder(DEAD, i + 1 , inCamp);
+                break;
+            case 'G':
+                tomb[i] = new General(DEAD, i + 1 , inCamp);
+                break;
+            case 'N':
+                tomb[i] = new Chessman(DEAD, i + 1 , inCamp);
+                break;
+        }
+    }
+}
+
+Chessboard &Chessboard::operator= (const Chessboard& src) {
+    for (auto & i : battleField) {
+        for (auto & j : i) {
+            delete j;
+        }
+    }
+
+    for (auto & i : tomb) {
+        delete i;
+    }
+
+    for (int i = 0; i < CHESSBOARD_LENGTH; ++i) {
+        for (int j = 0; j < CHESSBOARD_WIDTH; ++j) {
+            Chessman* target = src(i + 1 , j + 1);
+
+            switch (target->getType()) {
+                case SOLDIER:
+                    battleField[i][j] = new Soldier(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case BOMBARD:
+                    battleField[i][j] = new Bombard(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case HORSE:
+                    battleField[i][j] = new Horse(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case VEHICLE:
+                    battleField[i][j] = new Vehicle(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case ELEPHANT:
+                    battleField[i][j] = new Elephant(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case GUARDER:
+                    battleField[i][j] = new Guarder(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case GENERAL:
+                    battleField[i][j] = new General(i + 1 , j + 1 , target->getCamp());
+                    break;
+                case VACCUM:
+                    battleField[i][j] = new Chessman(i + 1 , j + 1 , target->getCamp() , VACCUM);
+                    break;
+            }
+
+        }
+    }
+
+    for (int i = 0; i < AMOUNT_OF_WHOLE_CHESSMEN; i++) {
+        Chessman *target = src(DEAD, i + 1);
+        switch (target->getType()) {
+            case SOLDIER:
+                tomb[i] = new Soldier(DEAD, i + 1, target->getCamp());
+                break;
+            case BOMBARD:
+                tomb[i] = new Bombard(DEAD, i + 1, target->getCamp());
+                break;
+            case HORSE:
+                tomb[i] = new Horse(DEAD, i + 1, target->getCamp());
+                break;
+            case VEHICLE:
+                tomb[i] = new Vehicle(DEAD, i + 1, target->getCamp());
+                break;
+            case ELEPHANT:
+                tomb[i] = new Elephant(DEAD, i + 1, target->getCamp());
+                break;
+            case GUARDER:
+                tomb[i] = new Guarder(DEAD, i + 1, target->getCamp());
+                break;
+            case GENERAL:
+                tomb[i] = new General(DEAD, i + 1, target->getCamp());
+                break;
+            case VACCUM:
+                tomb[i] = new Chessman(DEAD, i + 1, target->getCamp());
+                break;
+        }
+    }
+    return *this;
 }
 

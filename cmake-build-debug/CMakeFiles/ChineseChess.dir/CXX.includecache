@@ -7,6 +7,8 @@
 #IncludeRegexTransform: 
 
 /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.cpp
+fstream
+-
 Chessman.h
 /Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
 
@@ -19,16 +21,20 @@ graphic.h
 /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
 
 /Users/naphtholmizuha/Program/C++/ChineseChess/Game.cpp
+fstream
+-
 Game.h
 /Users/naphtholmizuha/Program/C++/ChineseChess/Game.h
 
 /Users/naphtholmizuha/Program/C++/ChineseChess/Game.h
-Chessman.h
-/Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
 graphic.h
 /Users/naphtholmizuha/Program/C++/ChineseChess/graphic.h
+Chessman.h
+/Users/naphtholmizuha/Program/C++/ChineseChess/Chessman.h
 
 /Users/naphtholmizuha/Program/C++/ChineseChess/Process.cpp
+fstream
+-
 Process.h
 /Users/naphtholmizuha/Program/C++/ChineseChess/Process.h
 graphic.h

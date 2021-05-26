@@ -13,6 +13,6 @@ using namespace std;
 void showTitle(std::string = "请输入操作代号以进行操作:");
 void clearScreen();
 string space(int num);
-void playGame (bool shouldLoad);
+void playGame(bool shouldLoad);
 
 #endif //CHINESECHESS_GRAPHIC_H

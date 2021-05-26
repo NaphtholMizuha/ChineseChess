@@ -97,21 +97,25 @@ public:
 };
 
 class Chessboard {
-private:
-    Chessman* battleField[CHESSBOARD_LENGTH][CHESSBOARD_WIDTH];//stores the chessmen which is still can be controlled
-    Chessman* tomb[AMOUNT_OF_WHOLE_CHESSMEN];//stores the chessmen which have been eaten
-
-
 public:
     Chessboard();
     ~Chessboard();
+
+    void loadSave(ifstream& src);
+
     Chessman* at(int x , int y) const;//find the chess by coordinate
     Chessman* operator() (int x , int y) const;//the same as the function "at"
+
     void swap(int x1 , int y1 , int x2 , int y2);
+
     string shape(int x , int y) const;//spawn the appearance of a chessman
-    void print();//print all the chessboard
-    bool isFinished() const;
-    Chessboard& operator=(const Chessboard& src);
+    void print() const;//print all the chessboard
+
+    Chessboard& operator= (const Chessboard& src);
+
+private:
+    Chessman* battleField[CHESSBOARD_LENGTH][CHESSBOARD_WIDTH];//stores the chessmen which is still can be controlled
+    Chessman* tomb[AMOUNT_OF_WHOLE_CHESSMEN];//stores the chessmen which have been eaten
 };
 
 #endif //CHINESECHESS_CHESSMAN_H

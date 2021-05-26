@@ -2,6 +2,7 @@
 // Created by NaphtholMizuha on 2021/5/12.
 //
 
+#include <fstream>
 #include "Process.h"
 #include "graphic.h"
 void showTitle(std::string info) {
@@ -27,8 +28,17 @@ string space(int num) {
 
 void playGame (bool shouldLoad) {
     Game game;
-    game.rounds();
-    cout << endl << SEPERATOR << game.getEndingInfo() << SEPERATOR;
+
+    if (shouldLoad) {
+        ifstream src;
+        src.open("ChineseChessSave.txt" , ios::in);
+        game.load(src);
+        src.close();
+    }
+
+    game.playOneGame();
+
+    cout << endl << SEPERATOR << endl << game.getEndingInfo() << endl << SEPERATOR;
 
 }
 

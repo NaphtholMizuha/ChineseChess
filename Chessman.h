@@ -41,11 +41,11 @@ public:
 
     Chessman(int x, int y, Camp camp , Type type = VACCUM);
     void swapPosition(int destX , int destY , Chessboard& chessboard) const;//swap 'this' chessman and destination chessman
-    int getX() const;
-    int getY() const;
+    [[nodiscard]] int getX() const;
+    [[nodiscard]] int getY() const;
     void set(int x , int y);
-    Camp getCamp() const;
-    Type getType() const;
+    [[nodiscard]] Camp getCamp() const;
+    [[nodiscard]] Type getType() const;
     void die(Chessboard& chessboard) const; // when 'this' is eaten by enemy
     int chessmanAmountBetween(int destX , int destY , const Chessboard& chessboard) const;//count the number of chessmans which are between 'this' and destination
     virtual bool canMove (int destX, int destY, const Chessboard& chessboard , ErrorInfo& errorInfo);//judge whether 'this' chessman can be moved to destination
